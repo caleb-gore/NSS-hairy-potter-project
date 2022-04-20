@@ -5,41 +5,36 @@ import { toSellOrNotToSell } from './PotteryCatalog.js'
 import { usePottery } from './PotteryCatalog.js'
 import { PotteryList } from './PotteryList.js'
 // Make 5 pieces of pottery at the wheel
-let mug1 = makePottery("mug", 5, 4)
-console.log(mug1);
-let mug2 = makePottery("mug", 5, 4)
-console.log(mug2);
-let mug3 = makePottery("mug", 5, 4)
-console.log(mug3);
-let mug4 = makePottery("mug", 5, 4)
-console.log(mug4);
-let mug5 = makePottery("mug", 5, 4)
-console.log(mug5);
+let pottery1 = makePottery("Mug", 4, 4)
+console.log(pottery1);
+let pottery2 = makePottery("Bowl", 8, 3)
+console.log(pottery2);
+let pottery3 = makePottery("Vase", 2, 8)
+console.log(pottery3);
+let pottery4 = makePottery("Pot", 7, 5)
+console.log(pottery4);
+let pottery5 = makePottery("Candle Holder", 3, 4)
+console.log(pottery5);
 
 // Fire each piece of pottery in the kiln
-let firedMug1 = firePottery(mug1, 2200)
-console.log(firedMug1)
-let firedMug2 = firePottery(mug2, 2200)
-console.log(firedMug2)
-let firedMug3 = firePottery(mug3, 2199)
-console.log(firedMug3)
-let firedMug4 = firePottery(mug4, 2200)
-console.log(firedMug4)
-let firedMug5 = firePottery(mug5, 2198)
-console.log(firedMug5)
+let firedPottery1 = firePottery(pottery1, 2200)
+console.log(firedPottery1)
+let firedPottery2 = firePottery(pottery2, 2200)
+console.log(firedPottery2)
+let firedPottery3 = firePottery(pottery3, 2199)
+console.log(firedPottery3)
+let firedPottery4 = firePottery(pottery4, 2200)
+console.log(firedPottery4)
+let firedPottery5 = firePottery(pottery5, 2198)
+console.log(firedPottery5)
 
 
 // Determine which ones should be sold, and their price
-toSellOrNotToSell(firedMug1)
-console.log(usePottery())
-toSellOrNotToSell(firedMug2)
-console.log(usePottery())
-toSellOrNotToSell(firedMug3)
-console.log(usePottery())
-toSellOrNotToSell(firedMug4)
-console.log(usePottery())
-toSellOrNotToSell(firedMug5)
-console.log(usePottery())
+let pricePottery1 = toSellOrNotToSell(firedPottery1)
+let pricePottery2 = toSellOrNotToSell(firedPottery2)
+let pricePottery3 = toSellOrNotToSell(firedPottery3)
+let pricePottery4 = toSellOrNotToSell(firedPottery4)
+let pricePottery5 = toSellOrNotToSell(firedPottery5)
 
 
 // Invoke the component function that renders the HTML list
