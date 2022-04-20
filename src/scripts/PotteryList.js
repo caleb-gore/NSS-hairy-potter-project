@@ -1,8 +1,10 @@
 import { usePottery } from "./PotteryCatalog.js"
 
-export const PotteryList = (potteryArr) => {
-    let htmlPotteryList = ""
-    for (const obj of potteryArr) {   
+// creates function to make string of pottery items to sell
+export const PotteryList = () => {
+    let htmlPotteryList = "" // defines empty string 
+    const toBeSold = usePottery() // invokes usePottery() to use array
+    for (const obj of toBeSold) { // iterates through array, adding strings to htmlPotteryList
         htmlPotteryList += `<section class="pottery" id="pottery--${obj.id}">
        <h2 class="pottery__shape">${obj.shape}</h2>
        <div class="pottery__properties">
@@ -12,6 +14,7 @@ export const PotteryList = (potteryArr) => {
            Price is $${obj.price}
        </div>
     </section>`
-   }
-return htmlPotteryList
+    }
+    return htmlPotteryList // returns htmlPotteryList
 } 
+
